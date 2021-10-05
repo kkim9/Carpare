@@ -2,7 +2,7 @@
   "name": "carapp",
   "version": "0.0.0",
   "engines":{
-    "node" : ">=14.15"
+    "node" : "14.x"
   },
   "scripts": {
     "ng": "ng",
