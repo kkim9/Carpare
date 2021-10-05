@@ -1,0 +1,31 @@
+.centerLogo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.content {
+    padding: 16px;
+}
+
+button {
+    margin: 0 auto;
+    display: block;
+}
+
+.mat-card-title {
+    text-align: center;
+}
+
+.mat-form-field {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    display: inline
+}
+
+p:nth-child(3n+1) {
+    font-weight: bold;
+}

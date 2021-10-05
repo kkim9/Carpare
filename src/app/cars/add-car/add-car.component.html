@@ -1,0 +1,113 @@
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of number">
+            <mat-card class="mat-elevation-z4">
+                <div *ngIf="(cars[num] | json) == '{}'">
+                    <mat-card-title>Add Car {{num+1}}</mat-card-title>
+
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Year</mat-label>
+                            <mat-select>
+                                <mat-option (onSelectionChange)="onChangeYear(year,$event)" *ngFor=" let year of years " [value]="year ">
+                                    {{year}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div>
+                        <mat-form-field appearance="fill ">
+                            <mat-label>Make</mat-label>
+                            <mat-select>
+                                <mat-option (onSelectionChange)="onChangeMake(make.make_display,make.make_id,$event)" *ngFor="let make of makes " [value]="make.make_display">
+                                    {{make.make_display}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div>
+                        <mat-form-field appearance="fill ">
+                            <mat-label>Model</mat-label>
+                            <mat-select>
+                                <mat-option (onSelectionChange)="onChangeModel(model.model_name,$event)" *ngFor="let model of models " [value]="model.model_name">
+                                    {{model.model_name}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div>
+                        <mat-form-field appearance="fill ">
+                            <mat-label>Trim</mat-label>
+                            <mat-select>
+                                <mat-option (onSelectionChange)="onChangeTrim(trim.model_id,$event)" *ngFor="let trim of trims" [value]="trim.model_trim">
+                                    {{trim.model_name}} {{trim.model_trim}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <button mat-fab color='primary' (click)="addCar(num)" [disabled]="selectedTrim===''">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
+                </div>
+                <div *ngIf="(cars[num] | json) !='{}' ">
+                    <mat-card-title>{{cars[num][0].model_make_id}} {{cars[num][0].model_name}}</mat-card-title>
+
+
+                    <div class="details ">
+                        <p>Country of origin:</p>
+                        <p>{{cars[num][0].make_country}}</p><br>
+                        <p>Body style:</p>
+                        <p>{{cars[num][0].model_body}}</p><br>
+                        <p>Engine location:</p>
+                        <p>{{cars[num][0].model_engine_position}}</p><br>
+                        <p>Engine type:</p>
+                        <p>{{cars[num][0].model_engine_type}}</p><br>
+                        <p>Engine cylinders:</p>
+                        <p>{{cars[num][0].model_engine_cyl}}</p><br>
+                        <p>Engine Displacement (cc):</p>
+                        <p>{{cars[num][0].model_engine_cc}}cc</p><br>
+                        <p>Engine Displacement (liters):</p>
+                        <p>{{cars[num][0].model_engine_l}}liters</p><br>
+                        <p>Engine max power (HP):</p>
+                        <p>{{cars[num][0].model_engine_power_hp}}</p><br>
+                        <p>Engine max power (RPM):</p>
+                        <p>{{cars[num][0].model_engine_power_rpm}}</p><br>
+                        <p>Engine max torque (l.b ft):</p>
+                        <p>{{cars[num][0].model_engine_torque_lbft}}</p><br>
+                        <p>Engine max torque (RPM):</p>
+                        <p>{{cars[num][0].model_engine_torque_rpm}}</p><br>
+                        <p>Engine compression Ratio:</p>
+                        <p>{{cars[num][0].model_engine_compression}}</p><br>
+                        <p>Engine fuel type:</p>
+                        <p>{{cars[num][0].model_engine_fuel}}</p><br>
+                        <p>Drive:</p>
+                        <p>{{cars[num][0].model_drive}}</p><br>
+                        <p>Transmission type:</p>
+                        <p>{{cars[num][0].model_transmission_type}}</p><br>
+                        <p>Top speed (MPH):</p>
+                        <p>{{cars[num][0].model_top_speed_mph}}</p><br>
+                        <p>0-100kph (0-62mph):</p>
+                        <p>{{cars[num][0].model_0_to_100_kph}}</p><br>
+                        <p>Weight (lbs):</p>
+                        <p>{{cars[num][0].model_weight_kg * 2.20462262}}</p><br>
+                        <p>Length(in.):</p>
+                        <p>{{cars[num][0].model_length_mm/25.4}}</p><br>
+                        <p>Width(in):</p>
+                        <p>{{cars[num][0].model_width_mm/25.4}}</p><br>
+                        <p>Height(in):</p>
+                        <p>{{cars[num][0].model_height_mm/25.4}}</p><br>
+                        <p>Wheelbase(in):</p>
+                        <p>{{cars[num][0].model_wheelbase_in}}</p><br>
+                        <p>Fuel capacity(g):</p>
+                        <p>{{cars[num][0].model_fuel_cap_g}}</p><br>
+                    </div>
+                </div>
+
+            </mat-card>
+        </div>
+    </div>
+</div>
