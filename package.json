@@ -1,8 +1,8 @@
 {
   "name": "carapp",
   "version": "0.0.0",
-  "engines":{
-    "node" : "14.x"
+  "engines": {
+    "node": "14.x"
   },
   "scripts": {
     "ng": "ng",
@@ -17,9 +17,9 @@
     "@angular/animations": "~11.1.2",
     "@angular/cdk": "^11.2.13",
     "@angular/cli": "~11.1.4",
-    "@angular/compiler-cli": "~11.1.2",
     "@angular/common": "~11.1.2",
     "@angular/compiler": "~11.1.2",
+    "@angular/compiler-cli": "~11.1.2",
     "@angular/core": "~11.1.2",
     "@angular/flex-layout": "^12.0.0-beta.35",
     "@angular/forms": "~11.1.2",
@@ -27,6 +27,7 @@
     "@angular/platform-browser": "~11.1.2",
     "@angular/platform-browser-dynamic": "~11.1.2",
     "@angular/router": "~11.1.2",
+    "cors": "^2.8.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -35,6 +36,7 @@
     "@angular-devkit/build-angular": "^0.1101.4",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^1.0.0-rc.2",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",

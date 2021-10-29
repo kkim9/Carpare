@@ -17,8 +17,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
 import { DataService } from './data.service';
-import { HttpClientModule } from '@angular/common/http'; 
- 
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatInputModule,
     MatSelectModule,
-    HttpClientModule 
+    HttpClientModule,
+    HttpClientJsonpModule
 
   ],
   providers: [DataService],
